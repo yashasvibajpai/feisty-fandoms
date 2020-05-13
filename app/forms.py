@@ -48,7 +48,7 @@ class EditProfileForm(FlaskForm):
 #	we have implemented validation facility, but race condition applies if 2 people try to access the app at same time
 
 class PostForm(FlaskForm):
-	post = TextAreaField('Have something in mind? Open up.', validators = [DataRequired(), Length(min=1, max= 200)])
+	post = TextAreaField('Have something in mind? Open up.', validators = [DataRequired(), Length(min=1, max= 8000)])
 	submit = SubmitField('Submit')
 	
 class ResetPasswordRequestForm(FlaskForm):
